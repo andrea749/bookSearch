@@ -35,7 +35,7 @@ public class BookDetailActivity extends AppCompatActivity {
         String author = getIntent().getStringExtra("tvAuthor");
         tvTitle.setText(title);
         tvAuthor.setText(author);
-        Glide.with(Context context)
+        Glide.with(context)
                 .load(Uri.parse(bookCover))
                 .placeholder(R.drawable.ic_nocover)
                 .into(ivBookCover);
