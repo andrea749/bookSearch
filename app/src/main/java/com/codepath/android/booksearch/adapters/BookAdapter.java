@@ -55,6 +55,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
                 // We can access the data within the views
                 //Toast.makeText(context, tvTitle.getText(), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(context, BookDetailActivity.class);
+                i.putExtra("tvTitle", mBooks.get(position).getTitle());
+                i.putExtra("tvAuthor", mBooks.get(position).getAuthor());
+                i.putExtra("ivCover", mBooks.get(position).getCoverUrl());
                 mContext.startActivity(i);
 
             }
